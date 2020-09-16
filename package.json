@@ -1,0 +1,27 @@
+{
+  "name": "buynow-server",
+  "version": "1.0.0",
+  "description": "Node server for Buynow app",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-Mhyke/Buynow-server.git"
+  },
+  "keywords": [
+    "Buynow",
+    "server"
+  ],
+  "author": "Michael Madumere",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i-Mhyke/Buynow-server/issues"
+  },
+  "homepage": "https://github.com/i-Mhyke/Buynow-server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
