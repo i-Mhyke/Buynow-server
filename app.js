@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
 dotenv.config({ path: './.env' });
 const app = express();
 
@@ -21,6 +22,13 @@ mongoose
 
 // Middlewares
 app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Routes
+const userRoutes = require('./routes/userRoutes');
+
+app.use('/api', userRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello world');

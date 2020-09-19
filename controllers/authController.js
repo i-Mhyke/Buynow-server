@@ -35,6 +35,7 @@ exports.signUp = async (req, res, next) => {
       },
     });
   } catch (err) {
+    console.log(err);
     if (err.name === 'ValidationError') {
       const errors = Object.values(err.errors).map(el => el.message);
       const error = errors[0];
