@@ -116,12 +116,13 @@ exports.protectRoutes = async (req, res, next) => {
       );
     }
     req.user = currentUser;
+    console.log(req.user);
   } catch (err) {
     res.status(401).json({
       status: 'fail',
       error: 'You are not authenticated',
     });
-    console.log(err);
+    next(err);
   }
   next();
 };

@@ -27,8 +27,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Routes
 const userRoutes = require('./routes/userRoutes');
+const productRoutes = require('./routes/productsRoutes');
 
-app.use('/api', userRoutes);
+app.use('/api', userRoutes, productRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello world');
